@@ -82,7 +82,7 @@
 
                                                     <form class="d-inline-block"
                                                         action="{{ route('admin.projects.destroy', $project) }}"
-                                                        method="project">
+                                                        method="Post">
                                                         @csrf
                                                         @method('DELETE')
 

@@ -40,10 +40,7 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         $data = $request->validate($this->rules);
-
-
         $project = Project::create($data);
 
         return redirect()->route('admin.projects.show', $project);
