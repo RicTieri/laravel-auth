@@ -99,7 +99,7 @@ class ProjectController extends Controller
         $project = Project::withTrashed()->where('id', $id)->first();
         $project->restore();
 
-        return redirect()->route('admin.projects.show', $project);
+        return redirect()->route('admin.projects.index');
     }
 
     public function deletedDestroy(string $id)
